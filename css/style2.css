@@ -2476,3 +2476,10 @@ left: 0;
 width: 100%;
 height: 100%;
 }
+
+.progress-bar-purple {
+      background-color: purple !important;
+}
+.progress-bar-orange {
+      background-color: orange !important;
+}

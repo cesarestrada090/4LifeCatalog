@@ -1,9 +1,4 @@
-<!--A Design by W3layouts 
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +6,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery.min.js"></script>
+<script src="js/operaciones.js"></script>
 <script type="text/javascript" src="http://www.4lifeperudelivery.com/inscripcion/js/bootstrap.min.js"></script>
 <!-- Custom Theme files -->
 <!--theme-style-->
@@ -29,6 +25,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script>$(document).ready(function(){$(".memenu").memenu();});</script>	
 <!-- /start menu -->
 <link href="css/form.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+    window.smartlook||(function(d) {
+    var o=smartlook=function(){ o.api.push(arguments)},h=d.getElementsByTagName('head')[0];
+    var c=d.createElement('script');o.api=new Array();c.async=true;c.type='text/javascript';
+    c.charset='utf-8';c.src='//rec.smartlook.com/recorder.js';h.appendChild(c);
+    })(document);
+    smartlook('init', '8b8e29c1fdd9f7b10c8ad8f86f49d7bf6e063610');
+</script>
 
 </head>
 <body> 
@@ -109,7 +113,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										 
 								 <li>Costo:</li>
 								 <li class="active">S/. 240.00</li>
-								 <a href="#">Comprar Ahora</a>
+								 <a href="#" data-toggle="modal" data-target="#componenteComprar">Comprar Ahora</a>
 							 </ul>
 						 </div>
 						 <!-- 
@@ -147,7 +151,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 <li>Aumentala actividad de las células NK hasta un 437%</li>
 							 <li>Incluye Cordyvant – Fórmula 4Life, una mezcla exclusiva de ingredientes tales como hongos Shiitake, hongos Maitake, Cordyceps y Beta glucanos de avena.</li>
 							 <li>La fórmula Tri-Factor® es el resultado de una combinación de dos elementos de nutrición importantes: el calostro bovino y la yema de huevo.</li>
-							 <li>Recomendado para: Diabetes, Enfermedades autoinmunes, Sida, Cáncer, Fibromialgia, psoriasis, lupus.</li>
+							 <li>Recomendado para: <b>lupus, fibromialgia, artritis reumatoide, enfermedad de Crohn, enfermedad celiaca, hepatitis autoinmune, enfermedad de Graves, síndrome de fatiga crónica, colitis ulcerosa, diabetes mellitus tipo 1, cirrosis biliar hepática, miastenia gravis, psoriasis, anemia perniciosa, esclerosis múltiple, esclerosis lateral amiotrófica, purpura trombocitopenica, tiroiditis de HASHIMOTO, rosacea, espondilitis anquilosante.
+Contraindicado en TRASPLANTES(Menores a 3 meses de haber sido hechos debido que al subir las defensas y el sistema inmunitario existe riesgo de rechazar el organo)</b>
+</li>
 							 <li>Consumir de preferencia con el estómago vacío.</li>					 
 						 </ul>
 				  </div>
@@ -311,8 +317,110 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                 </div>
             </div>
+			<div id="componenteComprar" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						  <span aria-hidden="true">&times;</span>
+						</button>
+						<h4 class="modal-title">Seleccione el método de compra</h4>
+					  </div>
+					  <div class="modal-body">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+						  <div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingOne"  style="text-align: center; background-color:#3d63e4;">
+							<a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="text-decoration: none;">
+							  <h4 class="panel-title" style="color: #ffffff;">
+								 
+								  ¡Quiero ser cliente registrado y tener mi código!
+								
+							  </h4>
+							  </a>
+							</div>
+							<div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+							  <div class="panel-body">
+								Debes completar el siguiente formulario para poder inscribirte como cliente para que puedas ser acreedor a los increibles beneficios que 4Life, consulta por el programa "Lealtad". <a href="http://www.4lifeperudelivery.com/inscripcion/" style="color: #4025cc;">Click Aquí para llenar el formulario. </a> 
+								<br/><br/>
+								<center><b>EXPLICACIÓN PROGRAMA LEALTAD</b></center><br/>
+								
+								<center><iframe src="https://www.youtube.com/embed/qqtuIHHNl6E" frameborder="0" allowfullscreen></iframe></center>
+								
+								
+							  </div>
+							</div>
+						  </div>
+						  <div class="panel panel-default">
+							<div class="panel-heading" role="tab" id="headingTwo" style="background-color: #8fe43d; text-align: center; font-color: #ffffff;">
+							  <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="text-decoration: none;">
+							  <h4 class="panel-title" style="color: #ffffff;">
+								
+								  ¡Quiero comprar directamente sin código!
+							  </h4>
+								</a>
 
+							</div>
+							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							  <div class="panel-body">
+								<form action="php/comprar.php" method="POST" id="formContacto"  title="Comprar Transfer Factor Plus">
+								  <div class="form-group">
+									<label for="exampleInputCelular">Teléfono de Contacto</label>
+										<input id="exampleInputCelular" class="form-control"   name="exampleInputCelular" oninvalid="telefonoValidar(this);" oninput="telefonoValidar(this);" required="required" type="text"  />
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputDireccion">Ciudad</label>
+									<input type="text" class="form-control" id="exampleInputCiudad" name="exampleInputCiudad" oninvalid="ciudadValidar(this);" oninput="ciudadValidar(this);" required="required" aria-describedby="ciudadHelp" placeholder="Ingrese su Ciudad" >
+									<small id="ciudadHelp" class="form-text text-muted">Delivery gratis si el pedido es igual o mayor a los 50LP(para Lima) o 100 LP para provincia</small> 
+								  </div>
+								  <div class="form-group">
+									<label for="exampleInputDireccion">Dirección</label>
+									<input type="text" class="form-control" id="exampleInputDireccion" name="exampleInputDireccion" oninvalid="direccionValidar(this);" oninput="direccionValidar(this);" required="required" aria-describedby="direccionHelp" placeholder="Ingrese su dirección">
+									<small id="direccionHelp" class="form-text text-muted">Envíos a provincia vía Olva Courier</small> 
+								  </div>
+								  <div class="form-group">
+									<label for="exampleSelect1">Producto Seleccionado</label>
+									<select class="form-control" name="productoCombo" id="productoCombo" disabled>
+									  <option value="TransferPlus">Transfer Factor Plus(50 LP)</option>
+									</select>
+								  </div>
+								  <div class="form-group">
+									<label for="cantidadProducto">Cantidad</label>
+									<input type="number" id="cantidadProducto" name="cantidadProducto" oninvalid="cantidadValidar(this);" oninput="cantidadValidar(this);" required="required" class="form-control"  onkeyup="calcularMonto(50)">
+								  </div>
+								  <div class="form-group">
+									<label for="montoTotal">Total a Pagar</label>
+									<input type="text" id="montoTotal" name="montoTotal" class="form-control" disabled>
+								  </div>
+								  <div class="progress">
+									  <div class="progress-bar" role="progressbar" id="progressbar1" 
+									  aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+									  <label id="lblProgress">Costo Adicional por Delivery</label>		
+									  </div>
+								  </div>
+								  <div class="form-group">
+									<button type="submit" value="Send" class="btn-primary" id="submit" >¡Comprar!</button>
+									<button type="button" class="btn-secondary" data-dismiss="modal">Cerrar</button>
+								  </div>
+								</form>
+								
+							</div>
+						  </div>
+						  
+						</div>
+					  </div>
+					  <div class="modal-footer">
+					  
+						
+					  </div>
+					</div><!-- /.modal-content -->
 
+                    
+                </div>
+            </div>
+		</div>
+			
+
+		
 
 </body>
 </html>
