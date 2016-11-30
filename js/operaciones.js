@@ -79,3 +79,24 @@ function cantidadValidar(textbox) {
     return true;
 }
 
+function enviarCompra() {
+
+	var ciudad = $("#exampleInputCiudad").val();
+	var direccion = $("#exampleInputDireccion").val();
+	var telefono = $("#exampleInputCelular").val();
+	var producto = $("#productoCombo").val();
+	var cantidad = $("#cantidadProducto").val();
+	var montoTotal = $("#montoTotal").val();
+	$.ajax({
+		type: "POST",
+		url: "php/comprar.php",
+		data: "ciudad=" + ciudad + "&direccion=" + direccion + "&telefono=" + telefono+ "&producto=" + producto + "&cantidad=" + cantidad+ "&montoTotal=" + montoTotal,
+		success: function(text) {
+			
+		}
+	});
+	$("#componenteComprar").modal('hide');
+	return false;
+};
+
+

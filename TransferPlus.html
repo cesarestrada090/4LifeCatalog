@@ -362,8 +362,8 @@ Contraindicado en TRASPLANTES(Menores a 3 meses de haber sido hechos debido que 
 							</div>
 							<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
 							  <div class="panel-body">
-								<form action="php/comprar.php" method="POST" id="formContacto"  title="Comprar Transfer Factor Plus">
-								  <div class="form-group">
+								<form class="form-horizontal" action="php/comprar.php" method="POST" id="formContacto" onsubmit="return enviarCompra();" role="form" >
+								  <div class="form-group"> 
 									<label for="exampleInputCelular">Teléfono de Contacto</label>
 										<input id="exampleInputCelular" class="form-control"   name="exampleInputCelular" oninvalid="telefonoValidar(this);" oninput="telefonoValidar(this);" required="required" type="text"  />
 								  </div>
@@ -379,7 +379,7 @@ Contraindicado en TRASPLANTES(Menores a 3 meses de haber sido hechos debido que 
 								  </div>
 								  <div class="form-group">
 									<label for="exampleSelect1">Producto Seleccionado</label>
-									<select class="form-control" name="productoCombo" id="productoCombo" disabled>
+									<select class="form-control" name="productoCombo" id="productoCombo" readonly>
 									  <option value="TransferPlus">Transfer Factor Plus(50 LP)</option>
 									</select>
 								  </div>
@@ -389,7 +389,7 @@ Contraindicado en TRASPLANTES(Menores a 3 meses de haber sido hechos debido que 
 								  </div>
 								  <div class="form-group">
 									<label for="montoTotal">Total a Pagar</label>
-									<input type="text" id="montoTotal" name="montoTotal" class="form-control" disabled>
+									<input type="text" id="montoTotal" name="montoTotal" class="form-control" readonly>
 								  </div>
 								  <div class="progress">
 									  <div class="progress-bar" role="progressbar" id="progressbar1" 
@@ -398,7 +398,7 @@ Contraindicado en TRASPLANTES(Menores a 3 meses de haber sido hechos debido que 
 									  </div>
 								  </div>
 								  <div class="form-group">
-									<button type="submit" value="Send" class="btn-primary" id="submit" >¡Comprar!</button>
+									<input class="btn btn-primary" data-toggle="modal" data-target="#compraCorrecta" type="submit" name="enviar" tabindex="7" value="Enviar">
 									<button type="button" class="btn-secondary" data-dismiss="modal">Cerrar</button>
 								  </div>
 								</form>
@@ -418,6 +418,31 @@ Contraindicado en TRASPLANTES(Menores a 3 meses de haber sido hechos debido que 
                 </div>
             </div>
 		</div>
+		
+		<!-- Modal -->
+            <div id="compraCorrecta" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title" style="color:green; text-align: center;">Solicitud Realizada Exitosamente</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p  style="text-align: justify;" >Hemos enviado la información a la central, en unos minutos llegará tu código de cliente a tu correo con el que podras comprar en nuestros más de 10 locales autorizados en todo el Perú, en caso hayas solicitado ser distribuidor te llegará un correo adicional.</p>
+                            <p>Te dejamos un video para que conozcas algo más de acerca de los productos de 4LIFE</p>
+                            
+                            <br><br><p style="text-align: center; color:blue;" ><b>Te damos la bienvenida a 4LIFE. <br><br>¡GRACIAS POR CONFIAR EN NOSOTROS!</b></p>
+
+                        </div>
+                        <div class="modal-footer">
+                            <a class="btn btn-large btn-info" href="https://www.facebook.com/4lifeperudelivery/">Regresar a Facebook</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 			
 
 		

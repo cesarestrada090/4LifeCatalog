@@ -6,20 +6,20 @@
 
 //Comprobamos que se haya presionado el boton enviar
 //Guardamos en variables los datos enviados
-$ciudad = $_POST['exampleInputCiudad'];
-$direccion = $_POST['exampleInputDireccion'];
-$telefono = $_POST['exampleInputCelular'];
-$producto = $_POST['productoCombo'];
-$cantidad = $_POST['cantidadProducto'];
+$ciudad = $_POST['ciudad'];
+$direccion = $_POST['direccion'];
+$telefono = $_POST['telefono'];
+$producto = $_POST['producto'];
+$cantidad = $_POST['cantidad'];
 $montoTotal = $_POST['montoTotal'];
 
-
 ///Validamos del lado del servidor que el nombre y el email no estén vacios
-if ($nombre == '') {
+if ($direccion == '') {
     echo "Debe ingresar su nombre";
 } else if ($telefono == '') {
     echo "Debe ingresar su email";
 } else {
+	echo 4;
     $para = "cesarestrada090@gmail.com"; //Email al que se enviará
     $asunto = "COMPRA PRODUCTO ".$producto; //Puedes cambiar el asunto del mensaje desde aqui
     //Este sería el cuerpo del mensaje
@@ -51,7 +51,8 @@ if ($nombre == '') {
 		  </tr>
 	</table>	
 ";
-
+$nombre="4Life Peru";
+$email="pedidos@4lifeperudelivery.com";
 //Cabeceras del correo
     $headers = "From: $nombre <$email>\r\n"; //Quien envia?
     $headers .= "X-Mailer: PHP5\n";
@@ -62,8 +63,6 @@ if ($nombre == '') {
         echo "Su mensaje se ha enviado correctamente";
         echo "<br />";
         echo '<a href="../formulario_contacto.html">Volver</a>';
-    } else {
-        echo "success";
     }
 }
 ?>
